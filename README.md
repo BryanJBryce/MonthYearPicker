@@ -22,7 +22,12 @@ picker.maximumDate = Calendar.current.date(byAdding: .year, value: 10, to: Date(
 picker.addTarget(self, action: #selector(dateChanged(_:)), for: .valueChanged)
 view.addSubview(picker)
 ```
-
+Selector function expects a reference to MonthYearPickerView
+```swift
+@objc func dateChanged(_ picker: MonthYearPickerView) {
+    print("date changed: \(picker.date)")
+}
+```
 ## Requirements
 
 iOS 9.0 or later
